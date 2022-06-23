@@ -1,0 +1,22 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb-base",
+		"prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+		"init-declarations": ["error", "always"],
+		"no-console":"warn",
+		"no-plusplus": "off",
+		"padded-blocks": "off",
+		"quotes": ["error", "double", { "allowTemplateLiterals": true }],
+		"semi": ["error", "always"]
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "A battleship project made for The Odin Project. Includes usage of webpack, eslint, prettier and Jest with vanilla JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lofty-Brambles/Battleship.git"
+  },
+  "keywords": [],
+  "author": "Lofty Brambles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lofty-Brambles/Battleship/issues"
+  },
+  "homepage": "https://github.com/Lofty-Brambles/Battleship#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "prettier": "^2.7.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.3",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-merge": "^5.8.0"
+  }
+}
