@@ -4,7 +4,10 @@
   "description": "A battleship project made for The Odin Project. Includes usage of webpack, eslint, prettier and Jest with vanilla JS.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+	"build": "webpack --config webpack.dev.js --watch",
+	"prod": "webpack --config webpack.prod.js",
+	"redeploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -28,6 +31,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.1",
     "mini-css-extract-plugin": "^2.6.1",
     "prettier": "^2.7.1",
     "resolve-url-loader": "^5.0.0",

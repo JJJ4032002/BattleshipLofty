@@ -1,7 +1,5 @@
 const path = require("path");
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const dotenv = require("dotenv");
 
 module.exports = {
 	entry: "./src/index.js",
@@ -19,16 +17,35 @@ module.exports = {
 					viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 				}
 			}
-		),
-		new webpack.DefinePlugin({
-			"process.env": JSON.stringify(dotenv.config().parsed)
-		})
+		)
 	],
 	module: {
 		rules: [
 			{
 				test: /\.(svg|png|gif|webp|jpe?g)/i,
 				type: "asset/resource"
+			},
+			{
+				test: /\.m?js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: [
+							['@babel/preset-env', { targets: "defaults" }],
+							['env', { modules: false }]
+						],
+						plugins: ["syntax-dynamic-import"],
+						env: {
+							test: {
+								plugins: [
+									"transform-es2015-modules-commonjs",
+									"dynamic-import-node"
+								]
+							}
+						}
+					}
+				}
 			}
 		]
 	}
